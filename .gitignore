@@ -31,3 +31,9 @@
 
 # "temporary" build files
 /target
+
+# Chef lock files
+*.lock
+
+# vagrant temporal
+.vagrant
