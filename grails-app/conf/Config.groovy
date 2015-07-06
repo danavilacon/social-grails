@@ -88,6 +88,7 @@ grails.hibernate.osiv.readonly = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        grails.plugin.springsecurity.debug.useFilter = true
     }
     production {
         grails.logging.jul.usebridge = false
@@ -131,4 +132,6 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/images/**':                  ['permitAll'],
 	'/**/favicon.ico':                ['permitAll']
 ]
+// GET access for logout 
+grails.plugin.springsecurity.logout.postOnly = false
 
