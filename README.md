@@ -1,7 +1,7 @@
-# social-grails
+# Social-grails
 Social Grails App
 
-#How to use Vagrant
+## How to use Vagrant
 
 Vagrant is a tool for building and distributing development environments.
 
@@ -21,26 +21,19 @@ vagrant up
 vagrant ssh
 ```
 
-## Seed create database and seed data (first time):
+## Run Application
 
 ```
 vagrant ssh
 cd /social-grails/
-
+grails run-app
 ```
 
-## Start local server:
+## Visit Application
 
 Visit URL
 ```
-http://192.168.33.19:3004/
+http://192.168.33.19:8080/
 ```
 
 # PROBLEMS?
-
-## Restart services MySQL and Redis Server
-```
-sudo service mysql restart
-sudo service redis-server restart
-```
-

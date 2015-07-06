@@ -21,15 +21,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      
      chef.json = {
         :tz => 'America/Santiago',
-        :mysql =>
-        {
-          :server_root_password => '',
-          :server_repl_password => 'root123',
-          :server_debian_password => 'root123',
-          :version => '5.6',
-          :remove_anonymous_Users => true,
-          :remove_test_database => true, 
-        },
         :java => 
         {
           :install_flavor => "oracle",
@@ -43,8 +34,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
      chef.add_recipe "apt"
      chef.add_recipe "curl::libcurl"
-     # chef.add_recipe "mysql::server"
-     # chef.add_recipe "mysql::client"
      chef.add_recipe "java"
      chef.add_recipe "zip"
    end
