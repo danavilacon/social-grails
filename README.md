@@ -33,7 +33,7 @@ grails run-app
 
 Visit URL
 ```
-http://192.168.33.19:8080/
+http://192.168.33.19:8080/social
 ```
 
 # PROBLEMS?
