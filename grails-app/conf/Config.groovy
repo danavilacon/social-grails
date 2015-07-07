@@ -126,12 +126,19 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/index':                         ['permitAll'],
 	'/index.gsp':                     ['permitAll'],
 	'/assets/**':                     ['permitAll'],
-    '/wsChat/**':                     ['permitAll'],
-    '/post/**':                       ['permitAll'],
 	'/**/js/**':                      ['permitAll'],
 	'/**/css/**':                     ['permitAll'],
 	'/**/images/**':                  ['permitAll'],
-	'/**/favicon.ico':                ['permitAll']
+	'/**/favicon.ico':                ['permitAll'],
+    '/wsChat/**':                     ['ROLE_USER'],
+    '/post/index':                    ['permitAll'],
+    '/post/**':                       ['ROLE_USER'],    
+    '/comment/index':                 ['permitAll'],
+    '/comment/**':                    ['ROLE_USER'],
+    '/blog/**':                       ['ROLE_ADMIN'],
+    '/company/**':                    ['ROLE_ADMIN'],
+    '/department/**':                 ['ROLE_ADMIN'],
+    
 ]
 // GET access for logout 
 grails.plugin.springsecurity.logout.postOnly = false
