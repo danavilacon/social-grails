@@ -2,6 +2,15 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: postInstance, field: 'content', 'error')} required">
+	<label for="content">
+		<g:message code="post.content.label" default="Content" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textArea name="content" cols="40" rows="5" maxlength="65000" required="" value="${postInstance?.content}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: postInstance, field: 'blog', 'error')} required">
 	<label for="blog">
 		<g:message code="post.blog.label" default="Blog" />
@@ -26,15 +35,6 @@
 </li>
 </ul>
 
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: postInstance, field: 'content', 'error')} required">
-	<label for="content">
-		<g:message code="post.content.label" default="Content" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="content" required="" value="${postInstance?.content}"/>
 
 </div>
 

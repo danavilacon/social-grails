@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list post">
 			
+				<g:if test="${postInstance?.content}">
+				<li class="fieldcontain">
+					<span id="content-label" class="property-label"><g:message code="post.content.label" default="Content" /></span>
+					
+						<span class="property-value" aria-labelledby="content-label"><g:fieldValue bean="${postInstance}" field="content"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${postInstance?.blog}">
 				<li class="fieldcontain">
 					<span id="blog-label" class="property-label"><g:message code="post.blog.label" default="Blog" /></span>
@@ -39,15 +48,6 @@
 						<g:each in="${postInstance.comments}" var="c">
 						<span class="property-value" aria-labelledby="comments-label"><g:link controller="comment" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
 						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${postInstance?.content}">
-				<li class="fieldcontain">
-					<span id="content-label" class="property-label"><g:message code="post.content.label" default="Content" /></span>
-					
-						<span class="property-value" aria-labelledby="content-label"><g:fieldValue bean="${postInstance}" field="content"/></span>
 					
 				</li>
 				</g:if>

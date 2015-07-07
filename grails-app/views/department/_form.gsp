@@ -20,12 +20,3 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: departmentInstance, field: 'users', 'error')} ">
-	<label for="users">
-		<g:message code="department.users.label" default="Users" />
-		
-	</label>
-	<g:select name="users" from="${com.crossover.User.list()}" multiple="multiple" optionKey="id" size="5" value="${departmentInstance?.users*.id}" class="many-to-many"/>
-
-</div>
-

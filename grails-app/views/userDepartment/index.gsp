@@ -24,11 +24,19 @@
 			<thead>
 					<tr>
 					
+						<th><g:message code="userDepartment.department.label" default="Department" /></th>
+					
+						<th><g:message code="userDepartment.user.label" default="User" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${userDepartmentInstanceList}" status="i" var="userDepartmentInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${userDepartmentInstance.id}">${fieldValue(bean: userDepartmentInstance, field: "department")}</g:link></td>
+					
+						<td>${fieldValue(bean: userDepartmentInstance, field: "user")}</td>
 					
 					</tr>
 				</g:each>

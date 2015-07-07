@@ -41,17 +41,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${departmentInstance?.users}">
-				<li class="fieldcontain">
-					<span id="users-label" class="property-label"><g:message code="department.users.label" default="Users" /></span>
-					
-						<g:each in="${departmentInstance.users}" var="u">
-						<span class="property-value" aria-labelledby="users-label"><g:link controller="user" action="show" id="${u.id}">${u?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form url="[resource:departmentInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">
