@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list blog">
 			
+				<g:if test="${blogInstance?.department}">
+				<li class="fieldcontain">
+					<span id="department-label" class="property-label"><g:message code="blog.department.label" default="Department" /></span>
+					
+						<span class="property-value" aria-labelledby="department-label"><g:link controller="department" action="show" id="${blogInstance?.department?.id}">${blogInstance?.department?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${blogInstance?.description}">
 				<li class="fieldcontain">
 					<span id="description-label" class="property-label"><g:message code="blog.description.label" default="Description" /></span>

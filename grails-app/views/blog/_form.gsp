@@ -2,6 +2,15 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: blogInstance, field: 'department', 'error')} required">
+	<label for="department">
+		<g:message code="blog.department.label" default="Department" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="department" name="department.id" from="${com.crossover.Department.list()}" optionKey="id" required="" value="${blogInstance?.department?.id}" class="many-to-one"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: blogInstance, field: 'description', 'error')} required">
 	<label for="description">
 		<g:message code="blog.description.label" default="Description" />
