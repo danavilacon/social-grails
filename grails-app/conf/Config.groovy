@@ -88,7 +88,6 @@ grails.hibernate.osiv.readonly = false
 environments {
     development {
         grails.logging.jul.usebridge = true
-        grails.plugin.springsecurity.debug.useFilter = true
     }
     production {
         grails.logging.jul.usebridge = false
@@ -128,6 +127,8 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/index.gsp':                     ['permitAll'],
 	'/assets/**':                     ['permitAll'],
     '/wsChat/**':                     ['permitAll'],
+    '/spud/**':                       ['permitAll'],
+    '/blog/**':                       ['permitAll'],
 	'/**/js/**':                      ['permitAll'],
 	'/**/css/**':                     ['permitAll'],
 	'/**/images/**':                  ['permitAll'],

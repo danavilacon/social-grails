@@ -79,6 +79,7 @@ grails.project.dependency.resolution = {
         compile ':spring-security-core:2.0-RC4'
 
         // blog plugin
+        compile ':spud-security:0.6.0'
         compile ":spud-blog:0.7.0"
 
         // chat plugin

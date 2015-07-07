@@ -36,6 +36,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      chef.add_recipe "curl::libcurl"
      chef.add_recipe "java"
      chef.add_recipe "zip"
+     chef.add_recipe "redis2"
    end
    config.vm.provision :shell, :path => "bootstrap.sh"
 end
